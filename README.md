@@ -1,4 +1,4 @@
-# Stanford Code in Place- Final Project 2021
+# Stanford Code in Place 2021- Final Project
 
 ## Past Projects
 
