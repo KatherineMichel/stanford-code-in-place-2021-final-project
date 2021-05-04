@@ -1,4 +1,4 @@
-# Stanford Final Project as Section Leader
+# Stanford Code in Place- Final Project as Section Leader
 
 ## Past Projects
 
