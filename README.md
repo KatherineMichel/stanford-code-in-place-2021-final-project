@@ -1,4 +1,4 @@
-# Stanford Code in Place- Final Project as Section Leader
+# Stanford Code in Place- Final Project 2021
 
 ## Past Projects
 
