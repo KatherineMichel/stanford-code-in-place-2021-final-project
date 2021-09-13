@@ -10,3 +10,10 @@ class ModelTestCase(TestCase):
     def test_artwork_model(self):
         artwork = baker.make(Artwork)
         assert artwork.title
+
+    def test_model_str(self):
+        artwork = baker.make(Artwork)
+        self.assertEqual(
+            str(artwork),
+            artwork.title,
+        )
