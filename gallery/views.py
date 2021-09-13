@@ -1,6 +1,7 @@
-from django.views.generic.base import TemplateView
+from django.shortcuts import render
+from .models import Artwork
 
+def gallery_view(request):
+    artwork = Artwork.objects.all()# [:9]
+    return render(request, 'index.html', {"artwork":artwork})
 
-class IndexView(TemplateView):
-
-    template_name = "index.html"

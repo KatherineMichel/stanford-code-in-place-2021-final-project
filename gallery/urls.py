@@ -1,7 +1,7 @@
 from django.urls import path
 
-from gallery.views import IndexView
+from .views import gallery_view
 
 urlpatterns = [
-    path("", IndexView.as_view(), name="index"),
+    path('', gallery_view, name='index'),
 ]

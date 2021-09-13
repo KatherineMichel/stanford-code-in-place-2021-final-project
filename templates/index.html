@@ -1,1 +1,39 @@
-Hello, world!
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        {% for artwork in artwork %}
+        
+        <div class="col">
+
+          <div class="card shadow-sm">
+
+            {% for artwork in artwork.images.all %}
+            <a href="{% url 'artwork' artwork.pk %}"><img src="{{ artwork.image.url }}" class="card-img-top" width="100%" height="225" alt="Artwork" title="Artwork" aria-label="Artwork" /></a>
+            <!--<a href="{{ artwork.image.url }}"><img src="{{ artwork.image.url }}" class="card-img-top" width="100%" height="225" alt="Artwork" title="Artwork" aria-label="Artwork" /></a>-->
+            {% endfor %}
+
+            <div class="card-body">
+              <p class="card-text">{{ artwork.title }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="{% url 'artwork' artwork.pk %}" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      {% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
