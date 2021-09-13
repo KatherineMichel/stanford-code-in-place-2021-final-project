@@ -1,7 +1,7 @@
 from django.test import TestCase
 from model_bakery import baker
 
-from .models import Artwork, Image
+from .models import Artwork
 
 
 class ModelTestCase(TestCase):
