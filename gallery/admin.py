@@ -1,3 +1,11 @@
 from django.contrib import admin
+from .models import Artwork, Image
 
-# Register your models here.
+class ImageInline(admin.TabularInline):
+    model = Image
+
+@admin.register(Artwork)
+class ArtworkAdmin(admin.ModelAdmin):
+    inlines = [
+        ImageInline
+    ]
